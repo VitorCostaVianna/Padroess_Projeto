@@ -14,6 +14,7 @@ import design.pattern.Factory.Product;
 import design.pattern.Observer.Newspaper;
 import design.pattern.Observer.WeatherDisplay;
 import design.pattern.Observer.WeatherStation;
+import design.pattern.Singleton.Singleton;
 
 public class Main {
    
@@ -94,6 +95,18 @@ public class Main {
        factory = new ConcreteFactoryB();
        product = factory.createProduct();
        product.display();
+    }
+
+    /**
+     * Demonstrates the Singleton design pattern by calling the 
+     * Singleton instance's doSomething method.
+     * 
+     * The Singleton pattern ensures that a class has only one instance 
+     * and provides a global point of access to it.
+     */
+    @SuppressWarnings("static-access")
+    public static void SingletonPattern(){
+        Singleton.getInstance().doSomething();
     }
 
 }
