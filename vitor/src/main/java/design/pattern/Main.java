@@ -1,11 +1,16 @@
 package design.pattern;
 
+import design.pattern.Factory.ConcreteFactoryA;
+import design.pattern.Factory.ConcreteFactoryB;
+import design.pattern.Factory.Factory;
+
 import design.pattern.ChainOfRessponsability.Level1SupportHandler;
 import design.pattern.ChainOfRessponsability.Level2SupportHandler;
 import design.pattern.ChainOfRessponsability.Level3SupportHandler;
 import design.pattern.ChainOfRessponsability.Priority;
 import design.pattern.ChainOfRessponsability.Request;
 import design.pattern.ChainOfRessponsability.SupportHandler;
+import design.pattern.Factory.Product;
 import design.pattern.Observer.Newspaper;
 import design.pattern.Observer.WeatherDisplay;
 import design.pattern.Observer.WeatherStation;
@@ -71,5 +76,24 @@ public class Main {
         weatherStation.setMeasurements(27.3f, 70.0f);
     }
 
+
+    /**
+     * Demonstrates the Factory Pattern by creating products using different factories.
+     * 
+     * This method creates a product using ConcreteFactoryA and displays it.
+     * Then, it creates another product using ConcreteFactoryB and displays it.
+     * 
+     * The Factory Pattern is used to create objects without specifying the exact class
+     * of object that will be created. It relies on a factory interface to create the product.
+     */
+    public static void factoryPattern(){
+       Factory factory = new ConcreteFactoryA();
+       Product product = factory.createProduct();
+       product.display();
+
+       factory = new ConcreteFactoryB();
+       product = factory.createProduct();
+       product.display();
+    }
 
 }
