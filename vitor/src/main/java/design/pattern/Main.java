@@ -10,6 +10,11 @@ import design.pattern.ChainOfRessponsability.Level3SupportHandler;
 import design.pattern.ChainOfRessponsability.Priority;
 import design.pattern.ChainOfRessponsability.Request;
 import design.pattern.ChainOfRessponsability.SupportHandler;
+import design.pattern.Decorator.BigPizza;
+import design.pattern.Decorator.CheeseDecorator;
+import design.pattern.Decorator.MushroomDecorator;
+import design.pattern.Decorator.PeperoniDecorator;
+import design.pattern.Decorator.Pizza;
 import design.pattern.Factory.Product;
 import design.pattern.Observer.Newspaper;
 import design.pattern.Observer.WeatherDisplay;
@@ -107,6 +112,37 @@ public class Main {
     @SuppressWarnings("static-access")
     public static void SingletonPattern(){
         Singleton.getInstance().doSomething();
+    }
+
+    /**
+     * Demonstrates the use of the Decorator Pattern with a Pizza example.
+     * 
+     * The Decorator Pattern allows behavior to be added to an individual object, 
+     * dynamically, without affecting the behavior of other objects from the same class.
+     * 
+     * This method creates a BigPizza object and decorates it with Cheese, Peperoni, 
+     * and Mushroom decorators, printing the description and cost at each step.
+     * 
+     * Steps:
+     * 1. Create a BigPizza object and print its description and cost.
+     * 2. Decorate the pizza with CheeseDecorator and print the updated description and cost.
+     * 3. Decorate the pizza with PeperoniDecorator and print the updated description and cost.
+     * 4. Decorate the pizza with MushroomDecorator and print the updated description and cost.
+     */
+    public static void DecoratorPattern(){
+
+        Pizza pizza = new BigPizza();
+        System.out.println(pizza.getDescription() + " Cost: " + pizza.getCost());
+
+        pizza = new CheeseDecorator(pizza);
+        System.out.println(pizza.getDescription() + " Cost: " + pizza.getCost());
+
+        pizza = new PeperoniDecorator(pizza);
+        System.out.println(pizza.getDescription() + " Cost: " + pizza.getCost());
+
+        pizza = new MushroomDecorator(pizza);
+        System.out.println(pizza.getDescription() + " Cost: " + pizza.getCost());
+
     }
 
 }
