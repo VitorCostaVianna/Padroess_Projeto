@@ -3,7 +3,8 @@ package design.pattern;
 import design.pattern.Factory.ConcreteFactoryA;
 import design.pattern.Factory.ConcreteFactoryB;
 import design.pattern.Factory.Factory;
-
+import design.pattern.Adapter.Printer;
+import design.pattern.Adapter.PrinterAdapter;
 import design.pattern.ChainOfRessponsability.Level1SupportHandler;
 import design.pattern.ChainOfRessponsability.Level2SupportHandler;
 import design.pattern.ChainOfRessponsability.Level3SupportHandler;
@@ -142,6 +143,18 @@ public class Main {
 
         pizza = new MushroomDecorator(pizza);
         System.out.println(pizza.getDescription() + " Cost: " + pizza.getCost());
+
+    }
+
+    public static void AdapterPattern(){
+        
+        PrinterAdapter printerAdapter = new PrinterAdapter();
+        printerAdapter.print();
+        clienteCode(printerAdapter);
+
+        /*public ClienteCode(Printer printer){
+            printer.print();
+        }*/
 
     }
 

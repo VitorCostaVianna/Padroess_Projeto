@@ -1,5 +1,5 @@
 package design.pattern.Adapter;
 
 public interface Printer {
-    public void print(String message);
+    public void print();
 }
