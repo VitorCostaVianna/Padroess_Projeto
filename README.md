@@ -1,4 +1,5 @@
-Design Patterns Examples
+-Design Patterns Examples
+
 Welcome to the Design Patterns Examples repository! 🎉
 
 This repository provides simple and practical implementations of commonly used design patterns. Whether you're a beginner trying to understand the fundamentals or a developer seeking a quick reference, these examples are designed to be straightforward and easy to follow.
